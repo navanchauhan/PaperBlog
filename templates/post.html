@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Post - {{content.metadata.title}}{% endblock %}
+
+{% block description %} {{content.metadata.description}} {% endblock %}
+
+{% block body %}
+<main>
+	{{ content}}
+	View the original scan of this post by clicking <a href="{{content.metadata.pdf}}">here.</a>
+</main>
+{% endblock %}

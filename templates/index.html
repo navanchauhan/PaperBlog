@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{config["BLOG"]["blog_title"]}}{% endblock %}
+
+{% block body %}
+
+<main>
+	{{ content}}
+
+	<h1>{{config["BLOG"]["blog_title"]}}</h1>
+
+<ul>
+{% for post in posts %}
+	<li><a href="{{post.metadata['link']}}">{{ post.metadata['title'] }}</a></li>
+	<ul>
+		<li>{{ post.metadata['DESC']}}</li>
+		<li>Published On: {{post.metadata['DATE']}}</li>
+
+
+{% endfor %}
+</ul>
+</main>
+{% endblock %}
