@@ -10,10 +10,7 @@
 
 <ul>
 {% for post in posts %}
-	<li><a href="{{post.metadata['link']}}">{{ post.metadata['title'] }}</a></li>
-	<ul>
-		<li>{{ post.metadata['DESC']}}</li>
-		<li>Published On: {{post.metadata['DATE']}}</li>
+	<li><a href="{{post.metadata['link']}}">{{post.metadata['DATE']}}</a> {{ post.metadata['title'] }}</li>
 
 
 {% endfor %}
